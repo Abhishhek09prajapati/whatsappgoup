@@ -5,16 +5,12 @@ fetch('https://api.npoint.io/f1c1bf09eb96314477d5')
     .then(data => {
 
         var optionSelect = document.getElementById("selectcata");
-
         data.catagories.forEach((item) => {
-
             var option = document.createElement("option");
             option.value = item;
             option.textContent = item;
-
             optionSelect.appendChild(option);
         });
-
         // ✅ change event select pe lagao
         optionSelect.addEventListener('change', function () {
             catagor = this.value;
@@ -23,25 +19,35 @@ fetch('https://api.npoint.io/f1c1bf09eb96314477d5')
     })
     .catch(err => console.log(err));
 
+var catago = localStorage.getItem('Catagories')
+
+if(!catago){
+    localStorage.setItem("Catagories","love group")
+}
+
 
 fetch('https://api.npoint.io/ec2ff67f87145e23f879')
     .then(res => res.json())
     .then(data => {
 
+
+        const result = data.filter(e =>
+            e.whatsappcata.toLowerCase() === catago.toLowerCase()
+        );
+
         const maindiv = document.getElementById('maindiv');
-
-        data.forEach(e => {
-
+        result.forEach((k, i) => {
             const div = document.createElement("div");
             div.className = "listitmes";
-            div.textContent = e.WhatsappGorupName;
+            div.textContent = k.WhatsappGorupName;
 
             div.addEventListener("click", () => {
-                window.open(e.Whatsappgrouplinks, "_blank");
+                window.open(k.Whatsappgrouplinks, "_blank");
             });
-
             maindiv.append(div);
-        });
+        })
+
+
     })
     .catch(err => console.error("Error:", err));
 
