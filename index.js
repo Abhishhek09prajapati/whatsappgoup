@@ -60,5 +60,5 @@ function addgroupbtn() {
 }
 
 function catagories(){
-    window.location.href = "/catagories"
+    window.location.href = "/catagories/index.html"
 }

@@ -12,8 +12,12 @@
 
 .divcata {
     border: 1px solid black;
-    /* display: flex; */
+    display: block;
     width: 150px;
     height: 100px;
     text-align: center;
+}
+.imgcata{
+    width: 100%;
+    height: max-content;
 }
