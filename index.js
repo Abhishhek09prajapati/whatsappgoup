@@ -1,5 +1,5 @@
 fetch('https://api.npoint.io/ec2ff67f87145e23f879')
-    .then(res => res.json())  
+    .then(res => res.json())
     .then(data => {
 
         const maindiv = document.getElementById('maindiv');
@@ -11,10 +11,54 @@ fetch('https://api.npoint.io/ec2ff67f87145e23f879')
             div.textContent = e.WhatsappGorupName;
 
             div.addEventListener("click", () => {
-                window.open(e.Whatsappgrouplinks,"_blank");
+                window.open(e.Whatsappgrouplinks, "_blank");
             });
 
             maindiv.append(div);
         });
     })
-    .catch(err => console.error("Error:", err)); 
+    .catch(err => console.error("Error:", err));
+
+
+let div = document.querySelector(".addgroupdiv");
+function addgroup() {
+    if (div.style.display === "none") {
+        div.style.display = "flex";
+    } else {
+        div.style.display = "none";
+    }
+}
+
+document.querySelector('#closeid').addEventListener('click', () => {
+    div.style.display = "none";
+})
+
+function addgroupbtn() {
+
+    var groupname = document.getElementById("groupname").value.trim();
+    var grouplink = document.getElementById("grouplink").value.trim();
+
+    // Check empty fields
+    if (!groupname || !grouplink) {
+        alert("Please Enter Group Name and Link");
+        return;
+    }
+
+    // Validate WhatsApp group link
+    if (!grouplink.includes("https://chat.whatsapp.com/")) {
+        alert("Please Enter Valid WhatsApp Group Link");
+        return;
+    }
+
+    // Encode message properly
+    var message = `Add my group: ${groupname}\nMy link: ${grouplink}`;
+    var encodedMessage = encodeURIComponent(message);
+
+    var url = `https://wa.me/916387215755?text=${encodedMessage}`;
+
+    window.open(url, "_blank");
+}
+
+function catagories(){
+    window.location.href = "/catagories"
+}
