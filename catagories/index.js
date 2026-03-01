@@ -12,7 +12,12 @@ fetch('https://api.npoint.io/f1c1bf09eb96314477d5')
             div.classList = "divcata"
             div.textContent = e;   // safer than innerHTML
             maindiv.append(div);
-            div.append(img)
+            div.prepend(img)
+
+            div.addEventListener("click", () => {
+                localStorage.setItem("Catagories", e)
+                window.location.href = "../"
+            })
         });
 
     })

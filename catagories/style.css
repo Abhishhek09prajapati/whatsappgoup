@@ -14,7 +14,8 @@
     border: 1px solid black;
     display: block;
     width: 150px;
-    height: 100px;
+    height: min-content;
+    padding: 5px;
     text-align: center;
 }
 .imgcata{

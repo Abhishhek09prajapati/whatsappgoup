@@ -1,3 +1,29 @@
+var catagor = '';
+
+fetch('https://api.npoint.io/f1c1bf09eb96314477d5')
+    .then(res => res.json())
+    .then(data => {
+
+        var optionSelect = document.getElementById("selectcata");
+
+        data.catagories.forEach((item) => {
+
+            var option = document.createElement("option");
+            option.value = item;
+            option.textContent = item;
+
+            optionSelect.appendChild(option);
+        });
+
+        // ✅ change event select pe lagao
+        optionSelect.addEventListener('change', function () {
+            catagor = this.value;
+        });
+
+    })
+    .catch(err => console.log(err));
+
+
 fetch('https://api.npoint.io/ec2ff67f87145e23f879')
     .then(res => res.json())
     .then(data => {
@@ -51,7 +77,7 @@ function addgroupbtn() {
     }
 
     // Encode message properly
-    var message = `Add my group: ${groupname}\nMy link: ${grouplink}`;
+    var message = `Add my group: ${groupname}\nMy link: ${grouplink} in ${catagor}`;
     var encodedMessage = encodeURIComponent(message);
 
     var url = `https://wa.me/916387215755?text=${encodedMessage}`;
@@ -59,6 +85,6 @@ function addgroupbtn() {
     window.open(url, "_blank");
 }
 
-function catagories(){
+function catagories() {
     window.location.href = "/catagories/index.html"
 }
