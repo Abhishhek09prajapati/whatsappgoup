@@ -3,7 +3,7 @@ var catagor = '';
 fetch('https://api.npoint.io/f1c1bf09eb96314477d5')
     .then(res => res.json())
     .then(data => {
-
+        var listclass = document.getElementsByClassName('listclass')[0];
         var optionSelect = document.getElementById("selectcata");
         data.catagories.forEach((item) => {
             var option = document.createElement("option");
@@ -13,7 +13,27 @@ fetch('https://api.npoint.io/f1c1bf09eb96314477d5')
         });
         // ✅ change event select pe lagao
         optionSelect.addEventListener('change', function () {
-            catagor = this.value;
+            fetch('https://api.npoint.io/ec2ff67f87145e23f879')
+                .then(res => res.json())
+                .then(data => {
+                    listclass.innerHTML = ""
+                    const result = data.filter(e =>
+                        e.whatsappcata.toLowerCase() === this.value.toLowerCase()
+                    );
+
+
+                    result.forEach((k, i) => {
+                        const div = document.createElement("div");
+                        div.className = "listitmes";
+                        div.textContent = k.WhatsappGorupName;
+
+                        div.addEventListener("click", () => {
+                            window.open(k.Whatsappgrouplinks, "_blank");
+                        });
+                        listclass.append(div);
+                    })
+                })
+                .catch(err => console.error("Error:", err));
         });
 
     })
@@ -21,35 +41,12 @@ fetch('https://api.npoint.io/f1c1bf09eb96314477d5')
 
 var catago = localStorage.getItem('Catagories')
 
-if(!catago){
-    localStorage.setItem("Catagories","love group")
+if (!catago) {
+    localStorage.setItem("Catagories", "love group")
 }
 
 
-fetch('https://api.npoint.io/ec2ff67f87145e23f879')
-    .then(res => res.json())
-    .then(data => {
 
-
-        const result = data.filter(e =>
-            e.whatsappcata.toLowerCase() === catago.toLowerCase()
-        );
-
-        const maindiv = document.getElementById('maindiv');
-        result.forEach((k, i) => {
-            const div = document.createElement("div");
-            div.className = "listitmes";
-            div.textContent = k.WhatsappGorupName;
-
-            div.addEventListener("click", () => {
-                window.open(k.Whatsappgrouplinks, "_blank");
-            });
-            maindiv.append(div);
-        })
-
-
-    })
-    .catch(err => console.error("Error:", err));
 
 
 let div = document.querySelector(".addgroupdiv");
