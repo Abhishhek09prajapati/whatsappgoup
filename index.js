@@ -79,8 +79,11 @@ document.querySelector('#closeid').addEventListener('click', () => {
 
 function addgroupbtn() {
 
-    var groupname = document.getElementById("groupname").value.trim();
-    var grouplink = document.getElementById("grouplink").value.trim();
+    var groupnameInput = document.getElementById("groupname");
+    var grouplinkInput = document.getElementById("grouplink");
+
+    var groupname = groupnameInput.value.trim();
+    var grouplink = grouplinkInput.value.trim();
 
     // Check empty fields
     if (!groupname || !grouplink) {
@@ -89,22 +92,24 @@ function addgroupbtn() {
     }
 
     // Validate WhatsApp group link
-    if (!grouplink.includes("https://chat.whatsapp.com/")) {
+    if (!grouplink.startsWith("https://chat.whatsapp.com/")) {
         alert("Please Enter Valid WhatsApp Group Link");
         return;
+    }    // Optional: Check category selected
+    if (!catagor) {
+        alert("Please Select Category");
+        return;
     }
+    // Encode message
+    var message = `Add my group: ${groupname} My link: ${grouplink}Category: ${catagor}`;
 
-    // Encode message properly
-    var message = `Add my group: ${groupname}\nMy link: ${grouplink} in ${catagor}`;
     var encodedMessage = encodeURIComponent(message);
-
     var url = `https://wa.me/916387215755?text=${encodedMessage}`;
 
     window.open(url, "_blank");
-}
 
-function catagories() {
-    window.location.href = "/catagories/index.html"
+    // Clear input fields correctly
+    groupnameInput.value = "";
+    grouplinkInput.value = "";
 }
-
 // document.getElementById('catagories')
