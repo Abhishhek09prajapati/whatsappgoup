@@ -116,15 +116,11 @@ function addgroupbtn() {
 fetch('https://api.npoint.io/ec2ff67f87145e23f879?t=' + Date.now())
 .then(res => res.json())
 .then(data => {
-
     data.slice(0, 25).forEach(e => {   // 👈 only first 25
-
         const div = document.createElement('div');
         div.innerHTML = e.WhatsappGorupName;
         div.classList.add("lastestlist");
-
         document.getElementsByClassName('listclass')[0].append(div);
-
         div.addEventListener('click', () => {
             window.open(e.Whatsappgrouplinks, "_blank");
         });
