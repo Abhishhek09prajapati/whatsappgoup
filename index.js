@@ -1,12 +1,9 @@
 var catagor = "";
 
-
-
 fetch('https://api.npoint.io/f1c1bf09eb96314477d5?t=' + Date.now())
     .then(res => res.json())
     .then(data => {
         let select = document.getElementById('selectcata2');
-
         data.catagories.forEach(w => {
             let option = document.createElement('option');
             option.textContent = w;
@@ -17,7 +14,7 @@ fetch('https://api.npoint.io/f1c1bf09eb96314477d5?t=' + Date.now())
         // ✅ Only ONE event listener
         select.addEventListener("change", () => {
             catagor = select.value;
-            console.log(catagor);
+            // console.log(catagor);
         });
 
         // console.log(catagor)
