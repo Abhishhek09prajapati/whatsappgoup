@@ -27,6 +27,7 @@ body {
     width: 100%;
     height: 500px;
     margin: 10px 0;
+
 }
 
 .maindiv h3 {
@@ -114,7 +115,6 @@ body {
     gap: 12px;
     z-index: 2000;
 }
-
 /* Close icon */
 .addgroupdiv .material-symbols-outlined {
     align-self: flex-end;
@@ -165,9 +165,25 @@ body {
     background: #1ebe5d;
 }
 
-#selectcata {
+#selectcata2,#selectcata {
     width: 100%;
-    height: 30px;
-    margin-top: 10px;
-    border: 1px solid green;
+    padding: 12px 16px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 2px solid #e0e0e0;
+    outline: none;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Hover */
+#selectcata2:hover {
+    border-color: #4CAF50;
+}
+
+/* Focus */
+#selectcata2:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
 }

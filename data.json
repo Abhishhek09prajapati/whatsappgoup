@@ -1,12 +1,52 @@
 [
+    "Select any One",
+    "Business & Startup",
+    "Digital Marketing",
+    "Online Earning",
+    "Stock Market & Trading",
+    "Crypto & NFT",
+    "Technology & Coding",
+    "Web Development",
+    "Graphic Designing",
+    "Job Updates",
+    "Government Jobs",
+    "Study & Education",
+    "Competitive Exams",
+    "Motivation & Success",
+    "Health & Fitness",
+    "Yoga & Meditation",
+    "News & Current Affairs",
+    "Entertainment & Movies",
+    "Gaming",
+    "Buy & Sell",
+    "Local Community",
+    "Business Ideas",
+    "Online Paisa Kamaye",
+    "Share Market",
+    "Crypto News",
+    "Tech Updates",
+    "Coding Help",
+    "Job Alert",
+    "Sarkari Naukri",
+    "Study Material",
+    "Exam Preparation",
+    "Motivational",
+    "Health Tips",
+    "Fitness Group",
+    "News Updates",
+    "Movie Discussion",
+    "Gaming Lovers",
+    "Buy & Sell Products",
+    "Local Lucknow Group",
+    "Startup Community",
+    "Freelancing"
+] ;
+
+[
     {
-        "WhatsappGorupName":"Abhishek",
-        "Whatsappgrouplinks":"sss",
-        "whatsappGroupImage":"sss"
-    },
-    {
-        "WhatsappGorupName":"Abhishek",
-        "Whatsappgrouplinks":"sss",
-        "whatsappGroupImage":"sss"
+        "WhatsappGorupName": "Abhishek",
+        "Whatsappgrouplinks": "https://www.google.com/",
+        "whatsappGroupImage": "https://www.google.com/",
+        "whatsappcata": "love Group"
     }
 ]

@@ -1,8 +1,24 @@
-var catagor = '';
+var catagor = "";
 
 fetch('https://api.npoint.io/f1c1bf09eb96314477d5')
     .then(res => res.json())
     .then(data => {
+        let select = document.getElementById('selectcata2');
+
+        data.catagories.forEach(w => {
+            let option = document.createElement('option');
+            option.textContent = w;
+            option.value = w;   // important
+            select.append(option);
+        });
+
+        // ✅ Only ONE event listener
+        select.addEventListener("change", () => {
+            catagor = select.value;
+            console.log(catagor);
+        });
+
+        // console.log(catagor)
         var listclass = document.getElementsByClassName('listclass')[0];
         var optionSelect = document.getElementById("selectcata");
         data.catagories.forEach((item) => {
@@ -91,3 +107,5 @@ function addgroupbtn() {
 function catagories() {
     window.location.href = "/catagories/index.html"
 }
+
+// document.getElementById('catagories')
