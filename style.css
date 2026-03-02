@@ -5,7 +5,7 @@
 }
 
 body {
-     background-color: blue;
+    background-color: blue;
     height: 100vh;
     overflow: hidden;
 }
@@ -61,39 +61,7 @@ body {
     background: #e9fef1;
 }
 
-.divnavi {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    /* max-width: 500px; */
-    /* margin: auto; */
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    /* background: #c41d1d; */
-    padding: 10px 0;
-    border-top: 1px solid #ddd;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.08);
-    z-index: 1000;
-}
 
-/* Each Nav Item */
-.divnavi div {
-    flex: 1;
-    text-align: center;
-    /* font-size: 14px; */
-    color: #555;
-    cursor: pointer;
-    transition: 0.3s ease;
-    padding: 6px 0;
-}
-
-/* Hover Effect */
-.divnavi div:hover {
-    color: #25D366;
-    transform: translateY(-5px);
-}
 
 /* Active Tab Example */
 .divnavi div.active {
@@ -117,6 +85,7 @@ body {
     gap: 12px;
     z-index: 2000;
 }
+
 /* Close icon */
 .addgroupdiv .material-symbols-outlined {
     align-self: flex-end;
@@ -167,7 +136,8 @@ body {
     background: #1ebe5d;
 }
 
-#selectcata2,#selectcata {
+#selectcata2,
+#selectcata {
     width: 100%;
     padding: 12px 16px;
     font-size: 16px;
@@ -189,6 +159,7 @@ body {
     border-color: #4CAF50;
     box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
 }
+
 @media (max-width: 480px) {
 
     body {
@@ -219,4 +190,13 @@ body {
         width: 95%;
         padding: 20px;
     }
+}
+
+.addgroypbtn img {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 8%;
+    right: 10%;
+
 }
