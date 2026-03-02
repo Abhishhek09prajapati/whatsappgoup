@@ -1,6 +1,8 @@
 var catagor = "";
 
-fetch('https://api.npoint.io/f1c1bf09eb96314477d5')
+
+
+fetch('https://api.npoint.io/f1c1bf09eb96314477d5?t=' + Date.now())
     .then(res => res.json())
     .then(data => {
         let select = document.getElementById('selectcata2');
@@ -29,7 +31,7 @@ fetch('https://api.npoint.io/f1c1bf09eb96314477d5')
         });
         // ✅ change event select pe lagao
         optionSelect.addEventListener('change', function () {
-            fetch('https://api.npoint.io/ec2ff67f87145e23f879')
+            fetch('https://api.npoint.io/ec2ff67f87145e23f879?t=' + Date.now())
                 .then(res => res.json())
                 .then(data => {
                     listclass.innerHTML = ""
