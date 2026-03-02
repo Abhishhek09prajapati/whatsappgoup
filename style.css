@@ -5,7 +5,9 @@
 }
 
 body {
-    background-color: blue;
+     background-color: blue;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .maindiv {
