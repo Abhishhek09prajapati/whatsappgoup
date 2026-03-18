@@ -15,7 +15,7 @@ body {
 .maindiv {
     width: max-content;
     padding: 15px;
-    height: 100vh;
+    height: 100%;
     border: 1px solid white;
     background-color: white;
     box-shadow: 1px 20px 100px rgb(247, 255, 247);
@@ -34,6 +34,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
     bottom: 0px;
 }
 
