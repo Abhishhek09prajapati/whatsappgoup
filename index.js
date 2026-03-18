@@ -28,7 +28,7 @@ fetch('https://api.npoint.io/f1c1bf09eb96314477d5?t=' + Date.now())
         });
         // ✅ change event select pe lagao
         optionSelect.addEventListener('change', function () {
-            fetch('https://api.npoint.io/ec2ff67f87145e23f879?t=' + Date.now())
+            fetch('https://opensheet.elk.sh/1EuqJxpY5KCyjKtJFR4bZOn2Hdz7Ma6kGpMBZ4LEyg9U/shop')
                 .then(res => res.json())
                 .then(data => {
                     listclass.innerHTML = ""
@@ -113,9 +113,10 @@ function addgroupbtn() {
     grouplinkInput.value = "";
 }
 
-fetch('https://api.npoint.io/ec2ff67f87145e23f879?t=' + Date.now())
+fetch('https://opensheet.elk.sh/1EuqJxpY5KCyjKtJFR4bZOn2Hdz7Ma6kGpMBZ4LEyg9U/shop')
 .then(res => res.json())
 .then(data => {
+    console.log(data)
     data.slice(0, 25).forEach(e => {   // 👈 only first 25
         const div = document.createElement('div');
         div.innerHTML = e.WhatsappGorupName;
