@@ -25,7 +25,7 @@ body {
 }
 
 .gpay {
-    width: 100%;
+    width: 90%;
     height: 50px;
     background-color: aqua;
     border: 1px slid black;
@@ -34,7 +34,9 @@ body {
     align-items: center;
     position: absolute;
     bottom: 0px;
+    overflow: hidden;
 }
+
 
 .listclass {
     /* background-color: pink; */
