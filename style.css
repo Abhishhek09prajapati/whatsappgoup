@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: blue;
+    /* background-color: blue; */
     height: 100vh;
     /* overflow: hidden; */
 }
@@ -167,6 +167,13 @@ body {
 #selectcata2:focus {
     border-color: #4CAF50;
     box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+}
+.addgroypbtn img {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 12%;
+    right: 10%;
 }
 
 @media (max-width: 480px) {
