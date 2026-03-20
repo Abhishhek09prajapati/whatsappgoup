@@ -39,10 +39,10 @@ body {
 .listclass {
     /* background-color: pink; */
     width: 100%;
-    height: 100%;
+    height: 80%;
     margin: 10px 0;
     overflow: auto;
-    background-color: #555;
+    /* background-color: #555; */
 
 }
 
