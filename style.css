@@ -13,7 +13,7 @@ body {
 }
 
 .maindiv {
-    width: max-content;
+    width: 40%;
     padding: 15px;
     height: 100%;
     border: 1px solid white;
@@ -21,6 +21,7 @@ body {
     box-shadow: 1px 20px 100px rgb(247, 255, 247);
     margin: auto;
     position: relative;
+    background-color: rgb(255, 99, 47)
 
 }
 
@@ -45,6 +46,7 @@ body {
     margin: 10px 0;
     overflow: auto;
     /* background-color: #555; */
+     
 
 }
 
@@ -66,11 +68,13 @@ body {
     text-align: center;
     font-family: 'Poppins', sans-serif;
     padding: 10px;
+    background-color: white;
+   
 }
 
 .listitmes:hover {
     transform: translateY(-4px);
-    background: #e9fef1;
+    background: #32da72;
 }
 
 
@@ -177,9 +181,15 @@ body {
     position: absolute;
     bottom: 12%;
     right: 10%;
+    border-radius: 50%;
+}
+.lastestlist:hover{
+    background-color: rgb(50, 251, 0);
+    transition: all 0.2s;
+    transform: translateY(2px);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
 
     body {
         background-color: #f0f2f5;
@@ -224,4 +234,5 @@ body {
     text-align: center;
     font-family: 'Poppins', sans-serif;
     padding: 10px;
+    background-color: white;
  }
